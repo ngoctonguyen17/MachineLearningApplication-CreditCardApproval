@@ -40,5 +40,13 @@ class Connector:
             return df
         except:
             traceback.print_exc()
-
         return None
+
+    def getTablesName(self):
+        cursor = self.conn.cursor()
+        cursor.execute("Show tables;")
+        results = cursor.fetchall()
+        tablesName = []
+        for item in results:
+            tablesName.append([tableName for tableName in item][0])
+        return tablesName

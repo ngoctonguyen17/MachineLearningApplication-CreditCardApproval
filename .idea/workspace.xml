@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/MLModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/MetricsResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Statistic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/StockPriceModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/TrainedModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/App.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/AppModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/AppRandomforest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/AppStatistic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/TestLoadModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/FullScreenChartEx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/LoginEx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/FileUtil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connectors/Connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Connectors/Connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modeling/StockPriceModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/connect.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/connect.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/evaluate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/evaluate.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/load.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/load.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/new.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/new.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/rate.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/save.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/save.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/train.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/train.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/view.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/view.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2g9U8mptjOzjODYZqXO1CyHzKnR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.App.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MLBA-Final-Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="" />
+      <created>1715109129996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715109129996</updated>
+    </task>
+    <servers />
+  </component>
+</project>
