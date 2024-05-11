@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/MLModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/MetricsResult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Statistic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/StockPriceModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/TrainedModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/App.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/AppModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/AppRandomforest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/AppStatistic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/TestLoadModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/FullScreenChartEx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/LoginEx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/FileUtil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connectors/Connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Connectors/Connector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeling/StockPriceModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MLBA-Final-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MLBA-Final-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/MetricsResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/MetricsResult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/SVM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/LoginEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/LoginEx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/connect.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/connect.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/evaluate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/evaluate.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/load.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/load.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/new.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/new.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/rate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/rate.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/save.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/save.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/train.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/train.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/view.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/view.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/chartHandle.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chartHandle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +23,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2g9U8mptjOzjODYZqXO1CyHzKnR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.App.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.App.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/6. Final Project/MLBA-Final-Project&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLBA-Final-Project" />
