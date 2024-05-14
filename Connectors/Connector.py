@@ -2,14 +2,15 @@ import mysql.connector
 import traceback
 import pandas as pd
 
-class Connector:
 
+class Connector:
     def __init__(self, server=None, port=None, database=None, username=None, password=None):
         self.server = server
         self.port = port
         self.database = database
         self.username = username
         self.password = password
+        self.conn = None  # Khởi tạo conn là None
 
     def connect(self):
         try:
@@ -19,34 +20,48 @@ class Connector:
                 database=self.database,
                 user=self.username,
                 password=self.password)
+            print("Connection established to the database.")
             return self.conn
-        except:
+        except mysql.connector.Error as err:
+            print(f"Error connecting to database: {err}")
             traceback.print_exc()
         return None
 
     def commit(self):
-        if self.conn != None:
+        if self.conn:
             self.conn.commit()
-    def disConnect(self):
-        if self.conn != None:
+
+    def disconnect(self):
+        if self.conn:
             self.conn.close()
+            print("Connection closed.")
 
     def queryDataset(self, sql):
+        if self.conn is None:
+            raise ValueError("Connection to the database is not established.")
+
         try:
             cursor = self.conn.cursor()
             cursor.execute(sql)
             df = pd.DataFrame(cursor.fetchall())
             df.columns = cursor.column_names
             return df
-        except:
+        except mysql.connector.Error as err:
+            print(f"An error occurred: {err}")
             traceback.print_exc()
         return None
 
     def getTablesName(self):
-        cursor = self.conn.cursor()
-        cursor.execute("Show tables;")
-        results = cursor.fetchall()
-        tablesName = []
-        for item in results:
-            tablesName.append([tableName for tableName in item][0])
-        return tablesName
+        if self.conn is None:
+            raise ValueError("Connection to the database is not established.")
+
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute("SHOW TABLES;")
+            results = cursor.fetchall()
+            tablesName = [item[0] for item in results]
+            return tablesName
+        except mysql.connector.Error as err:
+            print(f"An error occurred: {err}")
+            traceback.print_exc()
+        return []

@@ -83,6 +83,16 @@ color: rgb(147, 94, 93);</string>
                  <height>180</height>
                 </size>
                </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);
+font: 63 12pt &quot;Montserrat SemiBold&quot;;
+</string>
+               </property>
+               <column>
+                <property name="text">
+                 <string>Age</string>
+                </property>
+               </column>
               </widget>
              </item>
             </layout>
@@ -117,7 +127,248 @@ color: rgb(147, 94, 93);</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
-              <layout class="QVBoxLayout" name="verticalLayoutFunctions"/>
+              <layout class="QVBoxLayout" name="verticalLayoutFunctions">
+               <item>
+                <widget class="QPushButton" name="pushButtonDistributionOfTotalGoodDebt">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1. Distribution of Total Good Debt</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonDistributionOfTotalIncome">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>2. Distribution of Years of working</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonDistributionOfApplicantAge">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>3. Distribution of Total Income</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonIncomeTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>4. Distribution of Applicant Age</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonJobTitleTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>5. Income Type by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonGenderTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>6. Job Title by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonEducationTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>7. Gender Type by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonFamilyTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>8. Education Type by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonHousingTypeByStatusOfApproval">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>9. Family Type  by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonDistributionOfYearOfWorking">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>10. Housing Type by Status of Approval </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
              </item>
             </layout>
            </widget>
@@ -152,7 +403,7 @@ color: rgb(147, 94, 93);</string>
           <x>20</x>
           <y>60</y>
           <width>301</width>
-          <height>151</height>
+          <height>201</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -176,7 +427,7 @@ color: rgb(147, 94, 93);</string>
           <x>340</x>
           <y>60</y>
           <width>301</width>
-          <height>150</height>
+          <height>201</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -198,7 +449,7 @@ color: rgb(147, 94, 93);</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>220</y>
+          <y>270</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -215,8 +466,8 @@ color: rgb(0, 0, 0);</string>
         <property name="geometry">
          <rect>
           <x>170</x>
-          <y>220</y>
-          <width>71</width>
+          <y>270</y>
+          <width>91</width>
           <height>31</height>
          </rect>
         </property>
@@ -232,9 +483,9 @@ color: rgb(0, 0, 0);</string>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>246</x>
-          <y>220</y>
-          <width>31</width>
+          <x>266</x>
+          <y>270</y>
+          <width>51</width>
           <height>31</height>
          </rect>
         </property>
@@ -250,7 +501,7 @@ color: rgb(0, 0, 0);</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>260</y>
+          <y>310</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -267,8 +518,8 @@ color: rgb(0, 0, 0);</string>
         <property name="geometry">
          <rect>
           <x>170</x>
-          <y>260</y>
-          <width>71</width>
+          <y>310</y>
+          <width>91</width>
           <height>31</height>
          </rect>
         </property>
@@ -312,88 +563,21 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButtonTrain">
+       <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>300</y>
-          <width>81</width>
+          <x>170</x>
+          <y>350</y>
+          <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(144, 92, 91);
-font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-color: rgb(255, 255, 255);</string>
+         <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
          <string>Train</string>
         </property>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_7">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>350</y>
-          <width>631</width>
-          <height>191</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Evaluation:</string>
-        </property>
-        <widget class="QWidget" name="formLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>611</width>
-           <height>148</height>
-          </rect>
-         </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="meanAbsoluteErrorLabel">
-            <property name="text">
-             <string>Mean Absolute Error (MAE):</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="meanAbsoluteErrorLineEdit"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="meanSquaredErrorMSELabel">
-            <property name="text">
-             <string>Mean Squared Error (MSE):</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="meanSquaredErrorMSELineEdit"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="rootMeanSquaredErrorRMSELabel">
-            <property name="text">
-             <string>Root Mean Squared Error (RMSE)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="rootMeanSquaredErrorRMSELineEdit"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="r2ScoreLabel">
-            <property name="text">
-             <string>R2 score:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="r2ScoreLineEdit"/>
-          </item>
-         </layout>
-        </widget>
        </widget>
       </widget>
      </widget>

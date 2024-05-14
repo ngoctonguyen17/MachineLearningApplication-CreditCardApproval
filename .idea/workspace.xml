@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MLBA-Final-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MLBA-Final-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/MetricsResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/MetricsResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/SVM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/LoginEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/LoginEx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connectors/Connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Connectors/Connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Statistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Statistic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/AppStatistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AppStatistic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/chartHandle.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chartHandle.py" afterDir="false" />
     </list>
@@ -31,16 +30,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.App.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/6. Final Project/MLBA-Final-Project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.App.executor": "Run",
+    "Python.AppStatistic.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/6. Final Project/MLBA-Final-Project"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Python.App">
     <configuration name="App" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLBA-Final-Project" />
       <option name="ENV_FILES" value="" />
@@ -63,9 +63,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="AppStatistic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MLBA-Final-Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/AppStatistic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.App" />
+        <item itemvalue="Python.AppStatistic" />
       </list>
     </recent_temporary>
   </component>
@@ -86,5 +109,16 @@
       <updated>1715109129996</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
