@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Connectors/Connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Connectors/Connector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Statistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Statistic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/AppStatistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AppStatistic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/chartHandle.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/chartHandle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +29,7 @@
     "Python.AppStatistic.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "last_opened_file_path": "O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/6. Final Project/MLBA-Final-Project"
   }
 }]]></component>
