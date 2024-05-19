@@ -153,7 +153,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonDistributionOfTotalIncome">
+                <widget class="QPushButton" name="pushButtonDistributionOfYearOfWorking">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -177,7 +177,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonDistributionOfApplicantAge">
+                <widget class="QPushButton" name="pushButtonDistributionOfTotalIncome">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -201,7 +201,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonIncomeTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonDistributionOfApplicantAge">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -225,7 +225,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonJobTitleTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonIncomeTypeByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -249,7 +249,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonGenderTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonJobTitleByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -273,7 +273,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonEducationTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonGenderTypeByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -297,7 +297,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonFamilyTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonEducationTypeByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
@@ -321,13 +321,13 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonHousingTypeByStatusOfApproval">
+                <widget class="QPushButton" name="pushButtonFamilyTypeByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>9. Family Type  by Status of Approval </string>
+                  <string>9. Family Type by Status of Approval </string>
                  </property>
                 </widget>
                </item>
@@ -345,7 +345,7 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButtonDistributionOfYearOfWorking">
+                <widget class="QPushButton" name="pushButtonHousingTypeByStatusOfApproval">
                  <property name="styleSheet">
                   <string notr="true">color: rgb(0, 0, 0);
 font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
