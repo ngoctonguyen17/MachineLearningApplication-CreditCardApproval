@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1203</width>
-    <height>774</height>
+    <height>764</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
 color: rgb(147, 94, 93);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -355,19 +355,6 @@ font: 57 12pt &quot;Montserrat SemiBold&quot;;</string>
                  </property>
                 </widget>
                </item>
-               <item>
-                <spacer name="verticalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
               </layout>
              </item>
             </layout>
@@ -400,10 +387,10 @@ color: rgb(147, 94, 93);</string>
        <widget class="QGroupBox" name="groupBox_2">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>60</y>
-          <width>301</width>
-          <height>201</height>
+          <x>0</x>
+          <y>50</y>
+          <width>1181</width>
+          <height>301</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -413,129 +400,18 @@ color: rgb(147, 94, 93);</string>
          </size>
         </property>
         <property name="title">
-         <string>INPUT: Independent variables:</string>
+         <string>Data</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_7">
          <item>
-          <widget class="QListWidget" name="listWidgetIndependentVariables"/>
+          <widget class="QTableWidget" name="tableWidget"/>
          </item>
         </layout>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_5">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>60</y>
-          <width>301</width>
-          <height>201</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>150</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>TARGET: dependent variables:</string>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_8">
-         <item>
-          <widget class="QListWidget" name="listWidgetDependentVariables"/>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>270</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>Test Size:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditTestSize">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>270</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>20</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>266</x>
-          <y>270</y>
-          <width>51</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>%</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>310</y>
-          <width>151</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>Random State:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditRandomState">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>310</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>0</string>
-        </property>
        </widget>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>30</x>
+          <x>20</x>
           <y>10</y>
           <width>141</width>
           <height>31</height>
@@ -554,7 +430,7 @@ color: rgb(0, 0, 0);</string>
          <rect>
           <x>160</x>
           <y>11</y>
-          <width>241</width>
+          <width>351</width>
           <height>31</height>
          </rect>
         </property>
@@ -563,20 +439,294 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>350</y>
-          <width>91</width>
-          <height>31</height>
+          <x>440</x>
+          <y>360</y>
+          <width>361</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Action:</string>
+        </property>
+        <widget class="QPushButton" name="pushButtonTrain">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Train</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonEvaluate">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>30</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Evaluate Model</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>360</y>
+          <width>411</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Train Model Option:</string>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Test Size:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditTestSize">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>30</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>20</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>%</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>30</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Random State:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditRandomState">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>30</y>
+           <width>51</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>360</y>
+          <width>351</width>
+          <height>311</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
+         <string notr="true"/>
         </property>
-        <property name="text">
-         <string>Train</string>
+        <property name="title">
+         <string>Evaluation:</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>331</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="truePositiveLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>True Positive:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="truePositiveLineEdit"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="falsePositiveLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>False Positive:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="falsePositiveLineEdit"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="trueNegativeLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>True Negative:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="trueNegativeLineEdit"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="falseNegativeLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>False Negative:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="falseNegativeLineEdit"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="accuracyLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>Accuracy:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="accuracyLineEdit"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="recallLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>Recall:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="recallLineEdit"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="precisionLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>Precision:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="precisionLineEdit"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="rOCAUCLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>ROC AUC:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="rOCAUCLineEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>440</y>
+          <width>791</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Credit card approval prediction:</string>
         </property>
        </widget>
       </widget>

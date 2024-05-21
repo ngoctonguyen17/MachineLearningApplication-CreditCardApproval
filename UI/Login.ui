@@ -35,16 +35,19 @@ color: rgb(147, 94, 93);</string>
          <property name="geometry">
           <rect>
            <x>-10</x>
-           <y>-10</y>
-           <width>1151</width>
-           <height>351</height>
+           <y>0</y>
+           <width>1161</width>
+           <height>371</height>
           </rect>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../Images/banner_welcome.png</pixmap>
+          <pixmap>../Images/background_welcome.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
         <widget class="QLabel" name="label_2">

@@ -133,7 +133,6 @@ class MainWindowEx(Ui_MainWindow):
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
     def showDistributionOfYearOfWorking(self):
         self.connectDatabase()
         try:
@@ -166,8 +165,6 @@ class MainWindowEx(Ui_MainWindow):
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
-
     def showDistributionOfApplicantAge(self):
         self.connectDatabase()
         try:
@@ -200,7 +197,6 @@ class MainWindowEx(Ui_MainWindow):
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
     def showDistributionOfTotalIncome(self):
         self.connectDatabase()
         try:
@@ -233,13 +229,13 @@ class MainWindowEx(Ui_MainWindow):
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
     def showIncomeTypebyStatus(self):
         self.connectDatabase()
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Income_Type, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = "SELECT Income_Type, Status, COUNT(*) AS Count, \
+                    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Income_Type, Status \
                     ORDER BY Status, Income_Type"
@@ -254,34 +250,32 @@ class MainWindowEx(Ui_MainWindow):
         df[df["Status"] == 1]["Income_Type"].value_counts().plot(kind="pie", ax=ax1, autopct='%1.3f%%', labels=None)
         df[df["Status"] == 0]["Income_Type"].value_counts().plot(kind="pie", ax=ax2, autopct='%1.3f%%', labels=None)
 
-        # Set titles
+
         ax1.set_title("Income Type (Status = 1)")
         ax2.set_title("Income Type (Status = 0)")
 
-        ax1.set_ylabel('')  # Clear ylabel
+        ax1.set_ylabel('')
         ax1.legend(labels=df[df["Status"] == 1]["Income_Type"].unique(), loc="center right", bbox_to_anchor=(0.35, 0.001),
                    title="Income Type (Status = 1)")
 
-        ax2.set_ylabel('')  # Clear ylabel
+        ax2.set_ylabel('')
         ax2.legend(labels=df[df["Status"] == 0]["Income_Type"].unique(), loc="center right", bbox_to_anchor=(0.4, 0.001),
                    title="Income Type (Status = 0)")
 
         canvas = FigureCanvas(plt.gcf())
 
-        # Clear previous widgets in the layout
         for i in reversed(range(self.verticalLayoutPlot.count())):
             self.verticalLayoutPlot.itemAt(i).widget().setParent(None)
 
-        # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
     def showJobTitlebyStatus(self):
         self.connectDatabase()
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Job_Title, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = "SELECT Job_Title, Status, COUNT(*) AS Count, \
+                    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Job_Title, Status \
                     ORDER BY Status, Job_Title"
@@ -299,33 +293,30 @@ class MainWindowEx(Ui_MainWindow):
         ax1.set_title("Job_Title Type (Status = 1)")
         ax2.set_title("Job_Title Type (Status = 0)")
 
-        ax1.set_ylabel('')  # Clear ylabel
+        ax1.set_ylabel('')
         ax1.legend(labels=df[df["Status"] == 1]["Job_Title"].unique(), loc="center right", bbox_to_anchor=(0.35, 0.001),
                    title="Job_Title Type (Status = 1)")
 
-        ax2.set_ylabel('')  # Clear ylabel
+        ax2.set_ylabel('')
         ax2.legend(labels=df[df["Status"] == 0]["Job_Title"].unique(), loc="center right", bbox_to_anchor=(0.4, 0.001),
                    title="Job_Title Type (Status = 0)")
 
         canvas = FigureCanvas(plt.gcf())
 
 
-
-        # Clear previous widgets in the layout
         for i in reversed(range(self.verticalLayoutPlot.count())):
             self.verticalLayoutPlot.itemAt(i).widget().setParent(None)
 
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
-
-
     def showGenderTypebyStatus(self):
         self.connectDatabase()
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Applicant_Gender, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = "SELECT Applicant_Gender, Status, COUNT(*) AS Count, \
+                    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Applicant_Gender, Status \
                     ORDER BY Status, Applicant_Gender"
@@ -344,11 +335,11 @@ class MainWindowEx(Ui_MainWindow):
         ax1.set_title("Gender Type (Status = 1)")
         ax2.set_title("Gender Type (Status = 0)")
 
-        ax1.set_ylabel('')  # Clear ylabel
+        ax1.set_ylabel('')
         ax1.legend(labels=df[df["Status"] == 1]["Applicant_Gender"].unique(), loc="center right", bbox_to_anchor=(0.35, 0.001),
                    title="Gender Type (Status = 1)")
 
-        ax2.set_ylabel('')  # Clear ylabel
+        ax2.set_ylabel('')
         ax2.legend(labels=df[df["Status"] == 0]["Applicant_Gender"].unique(), loc="center right", bbox_to_anchor=(0.4, 0.001),
                    title="Gender Type (Status = 0)")
 
@@ -367,7 +358,8 @@ class MainWindowEx(Ui_MainWindow):
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Education_Type, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = "SELECT Education_Type, Status, COUNT(*) AS Count, \
+                    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Education_Type, Status \
                     ORDER BY Status, Education_Type"
@@ -409,7 +401,8 @@ class MainWindowEx(Ui_MainWindow):
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Family_Status, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = "SELECT Family_Status, Status, COUNT(*) AS Count, \
+                    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Family_Status, Status \
                     ORDER BY Status, Family_Status"
@@ -452,10 +445,11 @@ class MainWindowEx(Ui_MainWindow):
         try:
             sql = "SELECT * FROM application_data"
             df = self.connector.queryDataset(sql)
-            sql1 = "SELECT Housing_Type, Status, COUNT(*) AS Count, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
+            sql1 = ("SELECT Housing_Type, Status, COUNT(*) AS Count, " \
+                    "COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY Status) AS Ratio \
                     FROM application_data \
                     GROUP BY Housing_Type, Status \
-                    ORDER BY Status, Housing_Type"
+                    ORDER BY Status, Housing_Type")
             df1 = self.connector.queryDataset(sql1)
             self.showDataIntoTableWidget(self.tableWidgetStatistic, df1)
         except Exception as e:
@@ -490,5 +484,14 @@ class MainWindowEx(Ui_MainWindow):
         # Add the canvas to the layout
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
+
+    def loadTablesName(self):
+        self.connectDatabase()
+        tablesName = self.connector.getTablesName()
+        print(tablesName)
+        self.comboBoxDataset.clear()
+        for tableName in tablesName:
+            self.comboBoxDataset.addItem(tableName)
+
 
 

@@ -6,12 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Statistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Statistic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/FullScreenChart.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/FullScreenChartEx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/background_welcome.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/background_welcome.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/banner_welcome.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/banner_welcome.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/MLModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/MLModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/SVM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/AppModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AppModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/AppRandomforest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Login.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/FileUtil.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/FileUtil.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +36,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.App.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AppStatistic.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/2. Class/31-43/38. LearnPyQtBarGraphPart8&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.App (1).executor": "Run",
+    "Python.App.executor": "Run",
+    "Python.AppModel.executor": "Run",
+    "Python.AppStatistic.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "O:/Documents/ĐẠI HỌC/UEL/HỌC TẬP/HỌC KỲ 6/Machine-Learning-in-Business-Analytics/2. Class/31-43/38. LearnPyQtBarGraphPart8"
   }
-}</component>
-  <component name="RunManager" selected="Python.App">
+}]]></component>
+  <component name="RunManager" selected="Python.App (1)">
+    <configuration name="App (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MLBA-Final-Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/App.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="App" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLBA-Final-Project" />
       <option name="ENV_FILES" value="" />
@@ -54,6 +85,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AppModel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MLBA-Final-Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/AppModel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,6 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.App (1)" />
+        <item itemvalue="Python.AppModel" />
         <item itemvalue="Python.App" />
         <item itemvalue="Python.AppStatistic" />
       </list>
@@ -130,13 +185,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
-          <line>203</line>
-          <option name="timeStamp" value="2" />
+          <line>79</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="3" />
+          <line>271</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
