@@ -404,7 +404,12 @@ color: rgb(147, 94, 93);</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_7">
          <item>
-          <widget class="QTableWidget" name="tableWidget"/>
+          <widget class="QTableWidget" name="tableWidgetData">
+           <property name="styleSheet">
+            <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(0, 0, 0);</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -438,6 +443,11 @@ color: rgb(0, 0, 0);</string>
          <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
 color: rgb(0, 0, 0);</string>
         </property>
+        <item>
+         <property name="text">
+          <string>Applicant Data</string>
+         </property>
+        </item>
        </widget>
        <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
@@ -727,6 +737,19 @@ color: rgb(0, 0, 0);</string>
         </property>
         <property name="title">
          <string>Credit card approval prediction:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonViewData">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>10</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>View Data</string>
         </property>
        </widget>
       </widget>

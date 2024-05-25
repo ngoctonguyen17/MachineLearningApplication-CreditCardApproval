@@ -18,12 +18,20 @@ from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as Navigatio
 from matplotlib.figure import Figure
 from Connectors.Connector import Connector
 
+from imblearn.over_sampling import SMOTE
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.svm import LinearSVC
+from sklearn.metrics import roc_auc_score, roc_curve, classification_report, accuracy_score, confusion_matrix, precision_score, recall_score
+
+
 import random
 
 from UI.MainWindow import Ui_MainWindow
 from UI.LoginEx import LoginEx
 from UI.chartHandle import ChartHandle
 from Models.Statistic import CreditCardStatistics
+from Utils import FileUtil
 
 import traceback
 import pandas as pd
@@ -39,12 +47,17 @@ class MainWindowEx(Ui_MainWindow):
         self.chartHandle = ChartHandle()
         self.Statistic = CreditCardStatistics()
 
+        self.model_info = None
+
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
         self.checkEnableWidget(False)
         self.verticalLayoutFunctions.setAlignment(Qt.AlignmentFlag.AlignTop)
+
         self.actionLogin.triggered.connect(self.openLoginScreen)
+        # self.actionSave_Model.triggered.connect(self.saveModel)
+
         self.pushButtonDistributionOfTotalGoodDebt.clicked.connect(self.showDistributionOfTotalGoodDebt)
         self.pushButtonDistributionOfTotalIncome.clicked.connect(self.showDistributionOfTotalIncome)
         self.pushButtonDistributionOfApplicantAge.clicked.connect(self.showDistributionOfApplicantAge)
@@ -56,6 +69,9 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonFamilyTypeByStatusOfApproval.clicked.connect(self.showFamilyTypebyStatus)
         self.pushButtonHousingTypeByStatusOfApproval.clicked.connect(self.showHousingTypeByStatus)
 
+        self.pushButtonViewData.clicked.connect(self.loadDataIntoTable)
+        self.pushButtonTrain.clicked.connect(self.TrainModel)
+        self.pushButtonEvaluate.clicked.connect(self.EvaluateModel)
 
     def openLoginScreen(self):
         dbwindow = QMainWindow()
@@ -76,6 +92,10 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonEducationTypeByStatusOfApproval.setEnabled(flag)
         self.pushButtonFamilyTypeByStatusOfApproval.setEnabled(flag)
         self.pushButtonHousingTypeByStatusOfApproval.setEnabled(flag)
+        self.pushButtonViewData.setEnabled(flag)
+        self.pushButtonTrain.setEnabled(flag)
+        self.pushButtonEvaluate.setEnabled(flag)
+
 
     def connectDatabase(self):
         self.connector.server = "localhost"
@@ -485,13 +505,100 @@ class MainWindowEx(Ui_MainWindow):
         self.verticalLayoutPlot.addWidget(canvas)
         canvas.draw()
 
-    def loadTablesName(self):
+    def loadDataIntoTable(self):
         self.connectDatabase()
-        tablesName = self.connector.getTablesName()
-        print(tablesName)
-        self.comboBoxDataset.clear()
-        for tableName in tablesName:
-            self.comboBoxDataset.addItem(tableName)
+        selected_Dataset = self.comboBoxDataset.currentText()
 
+        if selected_Dataset == "Applicant Data":
+            sql = "SELECT * FROM credit_card.application_data;"
+        else:
+            return
+        df = self.connector.queryDataset(sql)
+        self.showDataIntoTableWidget(self.tableWidgetData, df)
 
+    def TrainModel(self):
+        # Load data
+        sql = "SELECT * FROM application_data"
+        df = self.connector.queryDataset(sql)
 
+        self.showDataIntoTableWidget(self.tableWidgetData, df)
+
+        # Define features
+        categorical_feature = ['Applicant_Gender', 'Owned_Car', 'Owned_Realty',
+                               'Income_Type', 'Education_Type', 'Family_Status',
+                               'Housing_Type', 'Owned_Mobile_Phone', 'Owned_Work_Phone',
+                               'Total_Bad_Debt', 'Owned_Phone', 'Owned_Email',
+                               'Job_Title']
+        numerical_feature = ['Total_Children', 'Total_Income', 'Total_Family_Members',
+                             'Applicant_Age', 'Years_of_Working', 'Total_Bad_Debt',
+                             'Total_Good_Debt']
+
+        # Select relevant columns
+        self.df_selected = df.loc[:, ['Status', 'Applicant_ID', 'Applicant_Age', 'Owned_Car',
+                                      'Owned_Realty', 'Owned_Phone', 'Total_Children',
+                                      'Total_Family_Members', 'Total_Income', 'Years_of_Working',
+                                      'Total_Good_Debt', 'Total_Bad_Debt', 'Income_Type',
+                                      'Education_Type', 'Applicant_Gender']]
+
+        # Map 'Education_Type' to numerical values
+        self.df_selected['Education_Type'] = self.df_selected['Education_Type'].str.strip()
+        scale_mapper = {'Lower secondary': 0, 'Secondary / secondary special': 1,
+                        'Incomplete higher': 2, 'Higher education': 3, 'Academic degree': 4}
+        self.df_selected['Education_Type'] = self.df_selected['Education_Type'].replace(scale_mapper)
+
+        if 'Income_Type_Working' in self.df_selected.columns:
+            self.df_selected['Income_Type_Working'] = self.df_selected['Income_Type_Working'].replace(
+                {True: 1, False: 0})
+
+        # Create dummy variables
+        Applicant_Gender_dummies = pd.get_dummies(self.df_selected['Applicant_Gender'], prefix='Applicant_Gender')
+        Income_Type_dummies = pd.get_dummies(self.df_selected['Income_Type'], prefix='Income_Type')
+
+        # Concatenate dummies and drop original columns
+        self.df_selected = pd.concat([self.df_selected, Applicant_Gender_dummies, Income_Type_dummies], axis=1)
+        self.df_selected.drop(['Applicant_Gender', 'Income_Type'], axis=1, inplace=True)
+
+        # Split data into x and y
+        self.y = self.df_selected['Status'].values
+        self.x = self.df_selected.drop(['Status', 'Applicant_ID'], axis=1).values
+
+        # Standardize data
+        sc = StandardScaler()
+        self.x = sc.fit_transform(self.x)
+
+        # Get test_size and random_state from input
+        self.test_size = float(self.lineEditTestSize.text()) / 100
+        self.random_state = int(self.lineEditRandomState.text())
+
+        # Split data into training and test sets
+        self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(
+            self.x, self.y, test_size=self.test_size, random_state=self.random_state)
+
+        # Apply SMOTE to training data
+        smote = SMOTE(random_state=self.random_state)
+        self.x_train_smote, self.y_train_smote = smote.fit_resample(self.x_train, self.y_train)
+
+        # Train SVM model
+        self.svm = LinearSVC(max_iter=1000, dual=False)  # dual=False để tránh cảnh báo FutureWarning
+        self.svm.fit(self.x_train_smote, self.y_train_smote)
+
+    def EvaluateModel(self):
+        # Make predictions
+        self.y_pred = self.svm.predict(self.x_test)
+
+        # Evaluate model
+        log_accuracy = round(accuracy_score(self.y_test, self.y_pred), 4)
+        log_recall = round(recall_score(self.y_test, self.y_pred), 4)
+        log_precision = round(precision_score(self.y_test, self.y_pred), 4)
+        log_rocauc = round(roc_auc_score(self.y_test, self.y_pred), 4)
+        tn, fp, fn, tp = confusion_matrix(self.y_test, self.y_pred).ravel()
+
+        # Display results in GUI
+        self.truePositiveLineEdit.setText(str(tp))
+        self.falsePositiveLineEdit.setText(str(fp))
+        self.trueNegativeLineEdit.setText(str(tn))
+        self.falseNegativeLineEdit.setText(str(fn))
+        self.accuracyLineEdit.setText(str(log_accuracy))
+        self.recallLineEdit.setText(str(log_recall))
+        self.precisionLineEdit.setText(str(log_precision))
+        self.rOCAUCLineEdit.setText(str(log_rocauc))

@@ -8,12 +8,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chart/ROC AUC.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chart/ROC AUC.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chart/Support Vector Machines Confusion Matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chart/Support Vector Machines Confusion Matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/TrainedModel.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/AppModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AppModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.App (1)" />
-        <item itemvalue="Python.AppModel" />
         <item itemvalue="Python.App" />
+        <item itemvalue="Python.AppModel" />
         <item itemvalue="Python.AppStatistic" />
       </list>
     </recent_temporary>
@@ -170,18 +182,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
-          <line>31</line>
+          <line>39</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
-          <line>79</line>
+          <line>99</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
-          <line>271</line>
+          <line>291</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
+          <line>418</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
+          <line>375</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UI/MainWindowEx.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
