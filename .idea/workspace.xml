@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="844c397e-887f-49df-89e8-929abe79581d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/MLModel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/MetricsResult.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/AppModel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/TestLoadModel.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/MainWindowEx.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

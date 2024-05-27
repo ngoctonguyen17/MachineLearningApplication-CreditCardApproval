@@ -838,7 +838,7 @@ class Ui_MainWindow(object):
         self.Owned_Phone.setText(_translate("MainWindow", "0"))
         self.pushButtonPredict.setText(_translate("MainWindow", "Predict"))
         self.label_17.setText(_translate("MainWindow", "Result:"))
-        self.ResultStatusPredict.setText(_translate("MainWindow", "Approval/Denied"))
+        self.ResultStatusPredict.setText(_translate("MainWindow", "Approved/Denied"))
         self.label_26.setText(_translate("MainWindow", "Click \"Predict\" to predict"))
         self.pushButtonViewData.setText(_translate("MainWindow", "View Data"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Machine Learning"))

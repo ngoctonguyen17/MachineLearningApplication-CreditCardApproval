@@ -1588,7 +1588,7 @@ color: rgb(255, 0, 4);</string>
 color: rgb(255, 0, 4);</string>
          </property>
          <property name="text">
-          <string>Approval/Denied</string>
+          <string>Approved/Denied</string>
          </property>
         </widget>
         <widget class="QLabel" name="label_26">
