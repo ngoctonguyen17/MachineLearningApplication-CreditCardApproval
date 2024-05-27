@@ -7,8 +7,7 @@ import pyqtgraph as pg
 from PyQt6 import QtGui, QtCore, QtWidgets
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QAction, QIcon, QPixmap
-from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QMainWindow, QDialog, QComboBox, QPushButton, QCheckBox, \
-    QListWidgetItem
+from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QMainWindow, QDialog, QComboBox, QPushButton, QCheckBox, QListWidgetItem
 from PyQt6.QtWidgets import QMenu, QFileDialog
 
 import seaborn as sns
@@ -72,6 +71,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonViewData.clicked.connect(self.loadDataIntoTable)
         self.pushButtonTrain.clicked.connect(self.TrainModel)
         self.pushButtonEvaluate.clicked.connect(self.EvaluateModel)
+        self.pushButtonPredict.clicked.connect(self.Prediction)
 
     def openLoginScreen(self):
         dbwindow = QMainWindow()
@@ -95,6 +95,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonViewData.setEnabled(flag)
         self.pushButtonTrain.setEnabled(flag)
         self.pushButtonEvaluate.setEnabled(flag)
+        self.pushButtonPredict.setEnabled(flag)
 
 
     def connectDatabase(self):
@@ -575,12 +576,15 @@ class MainWindowEx(Ui_MainWindow):
             self.x, self.y, test_size=self.test_size, random_state=self.random_state)
 
         # Apply SMOTE to training data
-        smote = SMOTE(random_state=self.random_state)
+        smote = SMOTE(random_state=242)
         self.x_train_smote, self.y_train_smote = smote.fit_resample(self.x_train, self.y_train)
 
         # Train SVM model
         self.svm = LinearSVC(max_iter=1000, dual=False)  # dual=False để tránh cảnh báo FutureWarning
-        self.svm.fit(self.x_train_smote, self.y_train_smote)
+        self.model = self.svm.fit(self.x_train_smote, self.y_train_smote)
+
+        QMessageBox.information(None, "Notification", "Model training has been completed.")
+
 
     def EvaluateModel(self):
         # Make predictions
@@ -594,11 +598,50 @@ class MainWindowEx(Ui_MainWindow):
         tn, fp, fn, tp = confusion_matrix(self.y_test, self.y_pred).ravel()
 
         # Display results in GUI
-        self.truePositiveLineEdit.setText(str(tp))
-        self.falsePositiveLineEdit.setText(str(fp))
-        self.trueNegativeLineEdit.setText(str(tn))
-        self.falseNegativeLineEdit.setText(str(fn))
-        self.accuracyLineEdit.setText(str(log_accuracy))
-        self.recallLineEdit.setText(str(log_recall))
-        self.precisionLineEdit.setText(str(log_precision))
-        self.rOCAUCLineEdit.setText(str(log_rocauc))
+        self.ResultTP.setText(str(tp))
+        self.ResultFP.setText(str(fp))
+        self.ResultTN.setText(str(tn))
+        self.ResultFN.setText(str(fn))
+        self.ResultAccuracy.setText(str(log_accuracy))
+        self.ResultRecall.setText(str(log_recall))
+        self.ResultPrecision.setText(str(log_precision))
+        self.ResultROCAUC.setText(str(log_rocauc))
+
+    def Prediction(self):
+        # Gather input data from the UI elements
+        applicant_age = float(self.Applicant_Age.text() or 0)
+        owned_car = int(self.Owned_Car.text() or 0)
+        owned_realty = int(self.Owned_Realty.text() or 0)
+        gender = 1 if self.Gender.currentText() == 'Male' else 0  # Assuming 1 for Male and 0 for Female
+        years_of_working = float(self.Years_of_Working.text() or 0)
+        education_type = self.Education_Type.currentIndex()  # Convert to numeric index
+        family_status = self.Family_Status.currentIndex()  # Convert to numeric index
+        housing_type = self.Housing_Type.currentIndex()  # Convert to numeric index
+        income_type = self.Income_Type.currentIndex()  # Convert to numeric index
+        total_children = int(self.Total_Children.text() or 0)
+        total_income = float(self.Total_Income.text() or 0)
+        total_family_members = int(self.Total_Family_Members.text() or 0)
+        total_bad_debt = float(self.Total_Bad_Debt.text() or 0)
+        total_good_debt = float(self.Total_Good_Debt.text() or 0)
+        owned_email = int(self.Owned_Email.text() or 0)
+        owned_phone = int(self.Owned_Phone.text() or 0)
+        owned_work_phone = int(self.Owned_Work_Phone.text() or 0)
+        owned_mobile_phone = int(self.Owned_Mobile_Phone.text() or 0)
+
+        # Perform any necessary preprocessing, scaling, or data formatting
+
+        # Pass the input data to the trained model for prediction
+        prediction = self.model.predict([[applicant_age, owned_car, owned_realty, gender, years_of_working,
+                                          education_type, family_status, housing_type, income_type,
+                                          total_children, total_income, total_family_members,
+                                          total_bad_debt, total_good_debt, owned_email,
+                                          owned_phone, owned_work_phone, owned_mobile_phone]])
+
+        # Display the prediction result
+        if prediction[0] == 1:
+            self.ResultStatusPredict.setText("Approved")
+        else:
+            self.ResultStatusPredict.setText("Denied")
+
+
+

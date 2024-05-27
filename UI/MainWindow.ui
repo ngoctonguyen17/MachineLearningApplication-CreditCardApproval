@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1203</width>
-    <height>764</height>
+    <height>796</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -388,9 +388,9 @@ color: rgb(147, 94, 93);</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>50</y>
+          <y>40</y>
           <width>1181</width>
-          <height>301</height>
+          <height>291</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -406,7 +406,7 @@ color: rgb(147, 94, 93);</string>
          <item>
           <widget class="QTableWidget" name="tableWidgetData">
            <property name="styleSheet">
-            <string notr="true">font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+            <string notr="true">font: 57 10pt &quot;Montserrat Medium&quot;;
 color: rgb(0, 0, 0);</string>
            </property>
           </widget>
@@ -452,9 +452,9 @@ color: rgb(0, 0, 0);</string>
        <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>360</y>
-          <width>361</width>
+          <x>480</x>
+          <y>330</y>
+          <width>401</width>
           <height>71</height>
          </rect>
         </property>
@@ -464,7 +464,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QPushButton" name="pushButtonTrain">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>30</y>
            <width>161</width>
            <height>31</height>
@@ -480,7 +480,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QPushButton" name="pushButtonEvaluate">
          <property name="geometry">
           <rect>
-           <x>190</x>
+           <x>220</x>
            <y>30</y>
            <width>161</width>
            <height>31</height>
@@ -497,9 +497,9 @@ color: rgb(0, 0, 0);</string>
        <widget class="QGroupBox" name="groupBox_6">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>360</y>
-          <width>411</width>
+          <x>0</x>
+          <y>330</y>
+          <width>471</width>
           <height>71</height>
          </rect>
         </property>
@@ -509,7 +509,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QLabel" name="label_3">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>30</y>
            <width>91</width>
            <height>31</height>
@@ -526,7 +526,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QLineEdit" name="lineEditTestSize">
          <property name="geometry">
           <rect>
-           <x>100</x>
+           <x>110</x>
            <y>30</y>
            <width>51</width>
            <height>31</height>
@@ -544,7 +544,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QLabel" name="label_4">
          <property name="geometry">
           <rect>
-           <x>160</x>
+           <x>170</x>
            <y>30</y>
            <width>51</width>
            <height>31</height>
@@ -561,7 +561,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QLabel" name="label_5">
          <property name="geometry">
           <rect>
-           <x>210</x>
+           <x>260</x>
            <y>30</y>
            <width>131</width>
            <height>31</height>
@@ -578,7 +578,7 @@ color: rgb(0, 0, 0);</string>
         <widget class="QLineEdit" name="lineEditRandomState">
          <property name="geometry">
           <rect>
-           <x>350</x>
+           <x>400</x>
            <y>30</y>
            <width>51</width>
            <height>31</height>
@@ -597,14 +597,15 @@ color: rgb(0, 0, 0);</string>
        <widget class="QGroupBox" name="groupBox_7">
         <property name="geometry">
          <rect>
-          <x>820</x>
-          <y>360</y>
-          <width>351</width>
-          <height>311</height>
+          <x>890</x>
+          <y>340</y>
+          <width>281</width>
+          <height>361</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background-color: rgb(255, 255, 255);
+</string>
         </property>
         <property name="title">
          <string>Evaluation:</string>
@@ -614,8 +615,8 @@ color: rgb(0, 0, 0);</string>
           <rect>
            <x>10</x>
            <y>30</y>
-           <width>331</width>
-           <height>271</height>
+           <width>261</width>
+           <height>321</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout">
@@ -625,14 +626,18 @@ color: rgb(0, 0, 0);</string>
              <string notr="true">color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
-             <string>True Positive:</string>
+             <string>True Positive:     </string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="truePositiveLineEdit"/>
+           <widget class="QLabel" name="ResultTP">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="falsePositiveLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -642,10 +647,14 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="falsePositiveLineEdit"/>
+          <item row="2" column="1">
+           <widget class="QLabel" name="ResultFP">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="2" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="trueNegativeLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -655,10 +664,14 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="trueNegativeLineEdit"/>
+          <item row="4" column="1">
+           <widget class="QLabel" name="ResultTN">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="3" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="falseNegativeLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -668,10 +681,27 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
-           <widget class="QLineEdit" name="falseNegativeLineEdit"/>
+          <item row="6" column="1">
+           <widget class="QLabel" name="ResultFN">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="4" column="0">
+          <item row="7" column="0">
+           <spacer name="verticalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="8" column="0">
            <widget class="QLabel" name="accuracyLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -681,10 +711,14 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <widget class="QLineEdit" name="accuracyLineEdit"/>
+          <item row="8" column="1">
+           <widget class="QLabel" name="ResultAccuracy">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="5" column="0">
+          <item row="10" column="0">
            <widget class="QLabel" name="recallLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -694,10 +728,14 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
-           <widget class="QLineEdit" name="recallLineEdit"/>
+          <item row="10" column="1">
+           <widget class="QLabel" name="ResultRecall">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="6" column="0">
+          <item row="12" column="0">
            <widget class="QLabel" name="precisionLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -707,10 +745,14 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="6" column="1">
-           <widget class="QLineEdit" name="precisionLineEdit"/>
+          <item row="12" column="1">
+           <widget class="QLabel" name="ResultPrecision">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
           </item>
-          <item row="7" column="0">
+          <item row="14" column="0">
            <widget class="QLabel" name="rOCAUCLabel">
             <property name="styleSheet">
              <string notr="true">color: rgb(0, 0, 0);</string>
@@ -720,8 +762,90 @@ color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
-           <widget class="QLineEdit" name="rOCAUCLineEdit"/>
+          <item row="14" column="1">
+           <widget class="QLabel" name="ResultROCAUC">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <spacer name="verticalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="9" column="0">
+           <spacer name="verticalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="11" column="0">
+           <spacer name="verticalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="13" column="0">
+           <spacer name="verticalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -729,15 +853,762 @@ color: rgb(0, 0, 0);</string>
        <widget class="QGroupBox" name="groupBox_8">
         <property name="geometry">
          <rect>
-          <x>9</x>
-          <y>440</y>
-          <width>791</width>
-          <height>231</height>
+          <x>-1</x>
+          <y>410</y>
+          <width>881</width>
+          <height>291</height>
          </rect>
         </property>
         <property name="title">
          <string>Credit card approval prediction:</string>
         </property>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>211</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Realty</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Total_Children</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="Owned_Realty">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="Owned_Car">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="Gender">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>M</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>F</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Gender: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Car</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Total_Income</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="Years_of_Working">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Years_of_Working</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="Applicant_Age">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Applicant_Age</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="Total_Children">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="Total_Income">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>30</y>
+           <width>391</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Mobile_Phone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Work_Phone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="Education_Type">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Secondary / secondary special</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Incomplete higher</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Higher education</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lower secondary </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Academic degree</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Family_Status</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Education_Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_12">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Housing_Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="Job_TitleLabel">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Job_Title </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="Family_Status">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Civil marriage</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Married</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Separated</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Single / not married</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Widow</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="Housing_Type">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Co-op apartment</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>House / apartment</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Municipal apartment</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Office apartment</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rented apartment</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>With parents</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Income_Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="Income_Type">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Commercial associate</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Pensioner</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>State servant</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Working</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Student</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="Owned_Work_Phone">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="Owned_Mobile_Phone">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="Job_Title">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Security staff                                    </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sales staff                                       </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Accountants                                       </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Laborers                                          </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Managers                                          </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Drivers                                           </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Core staff                                        </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>High skill tech staff                             </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cleaning staff                                    </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Private service staff                             </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cooking staff                                     </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Low-skill Laborers                                </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Medicine staff                                    </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Secretaries                                       </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Waiters/barmen staff                              </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>HR staff                                          </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Realty agents                                     </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>IT staff                                          </string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>30</y>
+           <width>241</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Total_Good_Debt</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_20">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Phone</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_21">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Total_Bad_Debt </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_23">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Total_Family_Members </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_24">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Owned_Email </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="Total_Bad_Debt">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="Total_Good_Debt">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="Total_Family_Members">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="Owned_Email">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="Owned_Phone">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+font: 57 10pt &quot;Montserrat Medium&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButtonPredict">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>220</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Predict</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>250</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 16pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(255, 0, 4);</string>
+         </property>
+         <property name="text">
+          <string>Result:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ResultStatusPredict">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>250</y>
+           <width>751</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 81 16pt &quot;Montserrat ExtraBold&quot;;
+color: rgb(255, 0, 4);</string>
+         </property>
+         <property name="text">
+          <string>Approval/Denied</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>630</x>
+           <y>200</y>
+           <width>231</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Click &quot;Predict&quot; to predict</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QPushButton" name="pushButtonViewData">
         <property name="geometry">

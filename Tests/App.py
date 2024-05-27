@@ -1,150 +1,106 @@
 from Connectors.Connector import Connector
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
-from sklearn.metrics import roc_auc_score, roc_curve, classification_report, accuracy_score, confusion_matrix, precision_score, recall_score
+from sklearn.metrics import accuracy_score, recall_score, precision_score, roc_auc_score, confusion_matrix
+from imblearn.over_sampling import SMOTE
 
-# Kết nối đến cơ sở dữ liệu và lấy dữ liệu
+# Function to transform the data
+def transform_data(input_df):
+    # Select necessary features
+    df_selected = input_df.loc[:, ['Status', 'Applicant_ID', 'Applicant_Age', 'Owned_Car',
+                                   'Owned_Realty', 'Owned_Phone', 'Total_Children',
+                                   'Total_Family_Members', 'Total_Income', 'Years_of_Working',
+                                   'Total_Good_Debt', 'Total_Bad_Debt', 'Income_Type',
+                                   'Education_Type', 'Applicant_Gender']]
+
+    # Normalize 'Education_Type' column
+    df_selected['Education_Type'] = df_selected['Education_Type'].str.strip()
+    scale_mapper = {'Lower secondary': 0, 'Secondary / secondary special': 1,
+                    'Incomplete higher': 2, 'Higher education': 3, 'Academic degree': 4}
+    df_selected['Education_Type'] = df_selected['Education_Type'].replace(scale_mapper).astype(int)
+
+    # Create dummy variables
+    Applicant_Gender_dummies = pd.get_dummies(df_selected['Applicant_Gender'], prefix='Applicant_Gender')
+    Income_Type_dummies = pd.get_dummies(df_selected['Income_Type'], prefix='Income_Type')
+
+    # Concatenate dummy variables to the DataFrame
+    df_selected = pd.concat([df_selected, Applicant_Gender_dummies, Income_Type_dummies], axis=1)
+
+    # Drop unnecessary columns
+    df_selected = df_selected.drop(['Applicant_Gender', 'Income_Type'], axis=1)
+
+    # Split data into x and y
+    y = df_selected.iloc[:, 0].values
+    x = df_selected.iloc[:, 1:].values
+
+    # Normalize the data
+    sc = StandardScaler()
+    x = sc.fit_transform(x)
+
+    return x, y, sc, df_selected.columns[1:]
+
+# Function to train the SVM model
+def svm_model(x_train, x_test, y_train, y_test):
+    # Apply SMOTE only on the training set
+    smote = SMOTE(random_state=242)
+    x_train_smote, y_train_smote = smote.fit_resample(x_train, y_train)
+
+    # Train SVM model
+    svm = LinearSVC(max_iter=1000, dual=False)  # dual=False to avoid FutureWarning
+    svm.fit(x_train_smote, y_train_smote)
+
+    # Predict on the test set
+    y_pred = svm.predict(x_test)
+
+    # Evaluate the model
+    accuracy = accuracy_score(y_test, y_pred)
+    recall = recall_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred)
+    rocauc = roc_auc_score(y_test, y_pred)
+    confusion_matrix_svm = confusion_matrix(y_test, y_pred)
+
+    return svm, accuracy, recall, precision, rocauc, confusion_matrix_svm
+
+# Connect to the database and retrieve data
 connector = Connector(server="localhost", port=3306, database="credit_card", username="root", password="123456")
 connector.connect()
 sql = "SELECT * FROM application_data"
 df = connector.queryDataset(sql)
 
-# Chọn các thuộc tính cần thiết
-df_selected = df.loc[:, ['Status', 'Applicant_ID', 'Applicant_Age', 'Owned_Car',
-                          'Owned_Realty', 'Owned_Phone', 'Total_Children',
-                          'Total_Family_Members', 'Total_Income', 'Years_of_Working',
-                          'Total_Good_Debt', 'Total_Bad_Debt', 'Income_Type',
-                          'Education_Type', 'Applicant_Gender']]
-
-# Chuẩn hóa cột 'Education_Type'
-df_selected['Education_Type'] = df_selected['Education_Type'].str.strip()
-scale_mapper = {'Lower secondary': 0, 'Secondary / secondary special': 1,
-                'Incomplete higher': 2, 'Higher education': 3, 'Academic degree': 4}
-df_selected['Education_Type'] = df_selected['Education_Type'].replace(scale_mapper).astype(int)
-
-# Tạo biến dummy
-Applicant_Gender_dummies = pd.get_dummies(df_selected['Applicant_Gender'], prefix='Applicant_Gender')
-Income_Type_dummies = pd.get_dummies(df_selected['Income_Type'], prefix='Income_Type')
-
-# Nối các biến dummy vào DataFrame
-df_selected = pd.concat([df_selected, Applicant_Gender_dummies, Income_Type_dummies], axis=1)
-
-# Xóa các cột không cần thiết
-df_selected = df_selected.drop(['Applicant_Gender', 'Income_Type'], axis=1)
-
-print(df_selected.head())
-
-# Chia dữ liệu thành x và y
-y = df_selected.iloc[:, 0].values
-x = df_selected.iloc[:, 1:].values
-
-# Chuẩn hóa dữ liệu
-sc = StandardScaler()
-x = sc.fit_transform(x)
-
-# Chia dữ liệu thành tập huấn luyện và tập kiểm tra
+x, y, sc, feature_names = transform_data(df)
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=242)
+svm_model, accuracy, recall, precision, rocauc, confusion_matrix_svm = svm_model(x_train, x_test, y_train, y_test)
 
-# Áp dụng SMOTE chỉ lên tập huấn luyện
-smote = SMOTE(random_state=18)
-x_train_smote, y_train_smote = smote.fit_resample(x_train, y_train)
+print("Accuracy:", accuracy)
+print("Recall:", recall)
+print("Precision:", precision)
+print("ROC AUC:", rocauc)
+print("Confusion Matrix:", confusion_matrix_svm)
 
-# Huấn luyện mô hình SVM
-svm = LinearSVC(max_iter=1000, dual=False)  # dual=False để tránh cảnh báo FutureWarning
+# Function to transform new customer data
+def transform_new_customer_data(new_data, sc, feature_names):
+    new_data_df = pd.DataFrame(new_data, columns=feature_names)
 
-svm.fit(x_train_smote, y_train_smote)
-y_pred = svm.predict(x_test)
+    # Create dummy variables
+    Applicant_Gender_dummies = pd.get_dummies(new_data_df['Applicant_Gender'], prefix='Applicant_Gender')
+    Income_Type_dummies = pd.get_dummies(new_data_df['Income_Type'], prefix='Income_Type')
 
-# # Đánh giá mô hình
-# log_accuracy = accuracy_score(y_test, y_pred)
-# log_recall = recall_score(y_test, y_pred)
-# log_precision = precision_score(y_test, y_pred)
-# log_rocauc = roc_auc_score(y_test, y_pred)
-#
-# print('{:.4f}'.format(log_accuracy), '- Log Accuracy')
-# print('{:.4f}'.format(log_recall), '- Log Recall')
-# print('{:.4f}'.format(log_precision), '- Log Precision')
-# print('{:.4f}'.format(log_rocauc), '- Log ROC AUC')
+    new_data_df = pd.concat([new_data_df, Applicant_Gender_dummies, Income_Type_dummies], axis=1)
 
-# # Hiển thị ma trận nhầm lẫn
-# confusion_matrix_svm = confusion_matrix(y_test, y_pred)
-#
-# plt.figure(figsize=(4, 4))
-# sns.heatmap(confusion_matrix_svm, annot=True, fmt="d", cmap="Blues", cbar=False)
-# plt.title('Support Vector Machines Confusion Matrix')
-# plt.xlabel('Predicted Label')
-# plt.ylabel('True Label')
-# plt.show()
+    new_data_df = new_data_df.drop(['Applicant_Gender', 'Income_Type'], axis=1)
 
-# # Vẽ biểu đồ ROC
-# svm_roc_auc = roc_auc_score(y_test, svm.predict(x_test))
-# fpr, tpr, thresholds = roc_curve(y_test, svm.decision_function(x_test))
-# plt.figure()
-# plt.plot(fpr, tpr, label='Support Vector Machines (area = %0.4f)' % svm_roc_auc)
-#
-# plt.plot([0, 1], [0, 1], 'r--')
-# plt.xlim([0.0, 1.0])
-# plt.ylim([0.0, 1.05])
-# plt.xlabel('False Positive Rate')
-# plt.ylabel('True Positive Rate')
-# plt.title('Receiver operating characteristic')
-# plt.legend(loc="lower right")
-# plt.show()
+    # Ensure all columns are present in new data
+    for col in feature_names:
+        if col not in new_data_df.columns:
+            new_data_df[col] = 0
 
+    # Sort columns to match training data
+    new_data_df = new_data_df[feature_names]
 
-# tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+    # Normalize the new data
+    new_data_standardized = sc.transform(new_data_df)
 
-# Print the metrics
-# print('True Positives (TP):', tp)
-# print('True Negatives (TN):', tn)
-# print('False Positives (FP):', fp)
-# print('False Negatives (FN):', fn)
-#
-# status_counts_before = pd.Series(y_train).value_counts()
-# status_counts_after = pd.Series(y_train_smote).value_counts()
-# print("Counts before SMOTE:")
-# print("Status 0:", status_counts_before.get(0, 0))
-# print("Status 1:", status_counts_before.get(1, 0))
-# print("Counts after SMOTE:")
-# print("Status 0:", status_counts_after.get(0, 0))
-# print("Status 1:", status_counts_after.get(1, 0))
-
-# Tạo một DataFrame chứa thông tin của khách hàng mới
-new_customer_data = pd.DataFrame({
-    'Applicant_Age': [53],
-    'Owned_Car': [0],
-    'Owned_Realty': [1],
-    'Owned_Phone': [1],
-    'Total_Children': [0],
-    'Total_Family_Members': [3],
-    'Total_Income': [270000],
-    'Years_of_Working': [5],
-    'Total_Good_Debt': [0],
-    'Total_Bad_Debt': [1000],
-    'Applicant_Gender_F': [0],
-    'Applicant_Gender_M': [1],
-    'Income_Type_Commercial associate': [0],
-    'Income_Type_Pensioner': [0],
-    'Income_Type_State servant': [0],
-    'Income_Type_Student': [1],
-    'Income_Type_Working': [1],
-    'Education_Type': [3]
-})
-
-# Chuẩn hóa dữ liệu mới
-new_customer_data_standardized = sc.transform(new_customer_data)
-
-# Dự đoán
-predicted_status = svm.predict(new_customer_data_standardized)
-
-# In kết quả dự đoán
-if predicted_status == 1:
-    print("Khách hàng này được phê duyệt thẻ tín dụng.")
-else:
-    print("Khách hàng này không được phê duyệt thẻ tín dụng.")
+    return new_data_standardized
