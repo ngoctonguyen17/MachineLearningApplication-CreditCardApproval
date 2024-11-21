@@ -1,5 +1,5 @@
 # Application for Credit Card Approval Prediction (Machine Learning)
---------------
+
 _This project was undertaken by **Ngoc To, Dong Quan,** and **Kim Ngan** as part of the course Machine Learning in Business Analytics._
 
 **💬 Introduction**
