@@ -2,7 +2,7 @@ Application for Credit Card Approval Prediction (Machine Learning)
 --------------
 _This project was undertaken by **Ngoc To, Dong Quan,** and **Kim Ngan** as part of the course Machine Learning in Business Analytics._
 
-**💬Introduction**
+**💬 Introduction**
 --------------
 - **Background:** Credit cards are increasingly popular worldwide, with over 140 million in Vietnam by July 2023. However, rising defaults require banks to carefully evaluate applications. Manual analysis is time-consuming, error-prone, and costly, leading to the adoption of machine learning for credit card approval. This project leverages AI to automate predictions, analyzing factors like credit history and income, enhancing accuracy, minimizing risks, reducing costs, and optimizing operations for financial institutions.
 
