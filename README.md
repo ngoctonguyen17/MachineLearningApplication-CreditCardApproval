@@ -2,20 +2,20 @@ Application for Credit Card Approval Prediction (Machine Learning)
 --------------
 _This project was undertaken by **Ngoc To, Dong Quan,** and **Kim Ngan** as part of the course Machine Learning in Business Analytics._
 
-**Introduction**
+**💬Introduction**
 --------------
 - **Background:** Credit cards are increasingly popular worldwide, with over 140 million in Vietnam by July 2023. However, rising defaults require banks to carefully evaluate applications. Manual analysis is time-consuming, error-prone, and costly, leading to the adoption of machine learning for credit card approval. This project leverages AI to automate predictions, analyzing factors like credit history and income, enhancing accuracy, minimizing risks, reducing costs, and optimizing operations for financial institutions.
 
 - **Objective:** This project aims to develop software integrating a machine learning model for credit card approval prediction. Key objectives include: applying tools (Qt Designer, MySQL, PyCharm), analyzing rejection indicators, exploring credit card theory and algorithms, addressing data imbalance, and building a predictive model to assist financial organizations in making accurate and efficient approval decisions.
 
 
-**Tools Used in the Project**
+**⚙️ Tools Used in the Project**
 --------------
 - **PyCharm:** Python IDE for coding, debugging, and refactoring.
 - **MySQL Workbench:** Tool for database modeling, administration, and SQL query development.
 - **Qt Designer:** GUI design tool for creating interactive application interfaces.
 
-**Dataset description**
+**📜 Dataset description**
 --------------
 The dataset for this project is sourced from Kaggle: Credit Card Approval Dataset. The dataset includes various features such as income, age, employment details, and other relevant information about credit card applicants.
 
